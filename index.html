@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lidios General Trading - Premier Security, Cleaning, Construction, Painting, Waterproofing, Plumbing, Welding & Building Services in Pretoria, South Africa. Professional solutions for your business.">
+  <meta name="keywords" content="security services pretoria, cleaning services, construction pretoria, painting contractors, waterproofing, plumbing services, welding, building contractors, general trading south africa">
+  <title>Lidios General Trading | Professional Services in Pretoria 🏗️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --secondary: #0891b2;
+      --accent: #0ea5e9;
+      --dark: #f8fafc;
+      --darker: #1e293b;
+      --light: #0f172a;
+      --gray: #475569;
+      --white: #ffffff;
+      --border: #e2e8f0;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--dark);
+      color: var(--light);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* 3D Animated Background */
+    .bg-3d {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 50%, #f0f9ff 100%);
+    }
+
+    .bg-3d::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(rgba(37, 99, 235, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(37, 99, 235, 0.03) 1px, transparent 1px);
+      background-size: 50px 50px;
+      animation: gridMove 20s linear infinite;
+    }
+
+    @keyframes bgFloat {
+      0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+      50% { transform: scale(1.2) rotate(5deg); opacity: 0.8; }
+    }
+
+    @keyframes gridMove {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(50px); }
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 1rem 2rem;
+      z-index: 1000;
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--light);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .mobile-menu span {
+      width: 25px;
+      height: 3px;
+      background: var(--light);
+      border-radius: 3px;
+      transition: 0.3s;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 2rem 4rem;
+      position: relative;
+      background: linear-gradient(135deg, rgba(248, 250, 252, 0.9) 0%, rgba(224, 242, 254, 0.9) 100%);
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(37, 99, 235, 0.1);
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      animation: pulse 2s infinite;
+    }
+
+    .hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 900;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, var(--light) 0%, var(--primary) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 1.2;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      color: var(--gray);
+      margin-bottom: 3rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 3rem;
+    }
+
+    .cta-btn {
+      padding: 1.2rem 3rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 50px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .cta-primary {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      box-shadow: 0 10px 40px rgba(37, 99, 235, 0.3);
+    }
+
+    .cta-secondary {
+      background: var(--white);
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    .cta-btn::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+
+    .cta-btn:hover::before {
+      width: 400px;
+      height: 400px;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 50px rgba(37, 99, 235, 0.4);
+    }
+
+    /* Services Section */
+    .services {
+      padding: 8rem 2rem;
+      position: relative;
+      background: var(--white);
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+
+    .section-badge {
+      display: inline-block;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 900;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, var(--light), var(--primary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .section-description {
+      font-size: 1.2rem;
+      color: var(--gray);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 4rem;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 2px solid var(--border);
+      border-radius: 24px;
+      padding: 3rem 2rem;
+      text-align: center;
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 24px;
+      opacity: 0;
+      transition: opacity 0.5s;
+      z-index: -1;
+    }
+
+    .service-card:hover::before {
+      opacity: 1;
+    }
+
+    .service-card:hover {
+      transform: translateY(-15px) scale(1.02);
+      box-shadow: 0 25px 60px rgba(37, 99, 235, 0.2);
+    }
+
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 1.5rem;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .service-card:nth-child(even) .service-icon {
+      animation-delay: 1s;
+    }
+
+    .service-card h3 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--light);
+    }
+
+    .service-card p {
+      color: var(--gray);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-features {
+      list-style: none;
+      text-align: left;
+      margin-top: 1.5rem;
+    }
+
+    .service-features li {
+      padding: 0.5rem 0;
+      color: var(--gray);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+    }
+
+    .service-features li::before {
+      content: '✓';
+      color: var(--primary);
+      font-weight: 900;
+      font-size: 1.2rem;
+    }
+
+    /* Why Choose Us */
+    .why-us {
+      padding: 8rem 2rem;
+      background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      margin-top: 4rem;
+    }
+
+    .feature-box {
+      text-align: center;
+      padding: 2rem;
+      transition: transform 0.3s;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-10px);
+    }
+
+    .feature-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+      animation: bounce 2s infinite;
+    }
+
+    .feature-box:nth-child(2) .feature-icon { animation-delay: 0.2s; }
+    .feature-box:nth-child(3) .feature-icon { animation-delay: 0.4s; }
+    .feature-box:nth-child(4) .feature-icon { animation-delay: 0.6s; }
+
+    .feature-box h4 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .feature-box p {
+      color: var(--gray);
+    }
+
+    /* CTA Section */
+    .cta-section {
+      padding: 8rem 2rem;
+      text-align: center;
+      position: relative;
+      background: var(--white);
+    }
+
+    .cta-box {
+      max-width: 900px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(14, 165, 233, 0.05));
+      border: 2px solid rgba(37, 99, 235, 0.2);
+      border-radius: 30px;
+      padding: 4rem 3rem;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-box::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(37, 99, 235, 0.1), transparent);
+      animation: shine 3s infinite;
+    }
+
+    @keyframes shine {
+      0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+      100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+    }
+
+    .cta-box h2 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 900;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+      color: var(--light);
+    }
+
+    .cta-box p {
+      font-size: 1.2rem;
+      color: var(--gray);
+      margin-bottom: 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: white;
+      padding: 1.5rem 3.5rem;
+      border-radius: 60px;
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: 700;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .whatsapp-btn::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+
+    .whatsapp-btn:hover::before {
+      width: 400px;
+      height: 400px;
+    }
+
+    .whatsapp-btn:hover {
+      transform: scale(1.1) rotate(-2deg);
+      box-shadow: 0 20px 60px rgba(37, 211, 102, 0.6);
+    }
+
+    .whatsapp-icon {
+      font-size: 2rem;
+      animation: wiggle 1s ease-in-out infinite;
+    }
+
+    @keyframes wiggle {
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(-15deg); }
+      75% { transform: rotate(15deg); }
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      padding: 4rem 2rem 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .batau-banner {
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+      border-radius: 30px;
+      padding: 4rem 3rem;
+      max-width: 1000px;
+      margin: 0 auto 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border: 3px solid #e2e8f0;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    }
+
+    .batau-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.1), transparent);
+      animation: bannerShine 3s infinite;
+    }
+
+    @keyframes bannerShine {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+
+    .batau-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .batau-icon {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+      display: inline-block;
+      filter: drop-shadow(0 4px 12px rgba(37, 99, 235, 0.3));
+    }
+
+    .batau-banner h3 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #2563eb, #0891b2);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: 900;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .batau-banner p {
+      font-size: 1.15rem;
+      color: var(--gray);
+      margin-bottom: 2.5rem;
+      line-height: 1.8;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .batau-banner p strong {
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .batau-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+      text-align: left;
+    }
+
+    .batau-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 1rem;
+      background: rgba(37, 99, 235, 0.05);
+      border-radius: 12px;
+      border: 1px solid rgba(37, 99, 235, 0.1);
+    }
+
+    .batau-feature-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .batau-feature-text {
+      font-size: 0.95rem;
+      color: var(--gray);
+      line-height: 1.5;
+    }
+
+    .batau-feature-text strong {
+      display: block;
+      color: var(--light);
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .batau-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, #2563eb, #0891b2);
+      color: white;
+      padding: 1.2rem 3rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.15rem;
+      transition: all 0.4s;
+      box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+      position: relative;
+      overflow: hidden;
+      margin-top: 1rem;
+    }
+
+    .batau-cta::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.5s, height 0.5s;
+    }
+
+    .batau-cta:hover::before {
+      width: 300px;
+      height: 300px;
+    }
+
+    .batau-cta:hover {
+      transform: scale(1.05) translateY(-2px);
+      box-shadow: 0 15px 40px rgba(37, 99, 235, 0.4);
+    }
+
+    .batau-cta span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-content {
+      text-align: center;
+      color: rgba(248, 250, 252, 0.7);
+      font-size: 0.95rem;
+    }
+
+    .footer-content p {
+      margin-bottom: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .footer-links a {
+      color: rgba(248, 250, 252, 0.7);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .mobile-menu {
+        display: flex;
+      }
+      
+      .cta-group {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .cta-btn {
+        width: 100%;
+        max-width: 300px;
+      }
+      
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .batau-banner {
+        padding: 2rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-3d"></div>
+
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Lidios Trading</div>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">🇿🇦 Pretoria's Trusted Partner</div>
+      <h1>Professional Trading Solutions for Every Need</h1>
+      <p class="hero-subtitle">
+        From Security & Construction to Cleaning & Maintenance - Lidios General Trading delivers excellence across Pretoria with over a decade of trusted service.
+      </p>
+      <div class="cta-group">
+        <a href="https://wa.me/27728506949?text=Hi%20Lidios!%20I'm%20interested%20in%20your%20services" class="cta-btn cta-primary" target="_blank">
+          <span>💬</span>
+          <span>Get Free Quote</span>
+        </a>
+        <a href="#services" class="cta-btn cta-secondary">
+          <span>View Services</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">OUR EXPERTISE</div>
+        <h2 class="section-title">Comprehensive Business Solutions</h2>
+        <p class="section-description">
+          Eight specialized services under one roof. Professional quality, competitive pricing, and unmatched reliability.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🛡️</div>
+          <h3>Security Guarding</h3>
+          <p>PSIRA-registered security personnel providing 24/7 protection for commercial and residential properties.</p>
+          <ul class="service-features">
+            <li>Armed & Unarmed Guards</li>
+            <li>Access Control</li>
+            <li>Patrol Services</li>
+            <li>Event Security</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">✨</div>
+          <h3>Cleaning Services</h3>
+          <p>Professional cleaning solutions for offices, warehouses, retail spaces, and residential properties.</p>
+          <ul class="service-features">
+            <li>Office Deep Cleaning</li>
+            <li>Industrial Cleaning</li>
+            <li>Window Cleaning</li>
+            <li>Carpet & Upholstery</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🏗️</div>
+          <h3>Construction</h3>
+          <p>Full-scale construction services from foundations to finishing, delivering quality projects on time.</p>
+          <ul class="service-features">
+            <li>New Builds</li>
+            <li>Renovations</li>
+            <li>Extensions</li>
+            <li>Project Management</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🎨</div>
+          <h3>Painting Services</h3>
+          <p>Expert interior and exterior painting with premium finishes that transform your space.</p>
+          <ul class="service-features">
+            <li>Residential Painting</li>
+            <li>Commercial Painting</li>
+            <li>Texture Coating</li>
+            <li>Industrial Coatings</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">💧</div>
+          <h3>Waterproofing</h3>
+          <p>Advanced waterproofing solutions protecting your property from water damage and structural issues.</p>
+          <ul class="service-features">
+            <li>Roof Waterproofing</li>
+            <li>Basement Sealing</li>
+            <li>Damp Proofing</li>
+            <li>Crack Repairs</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🔧</div>
+          <h3>Plumbing</h3>
+          <p>Licensed plumbers handling installations, repairs, and maintenance for all plumbing needs.</p>
+          <ul class="service-features">
+            <li>Emergency Repairs</li>
+            <li>Pipe Installation</li>
+            <li>Geyser Services</li>
+            <li>Drain Cleaning</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">⚙️</div>
+          <h3>Welding</h3>
+          <p>Professional welding and metalwork services for industrial, commercial, and residential applications.</p>
+          <ul class="service-features">
+            <li>Steel Fabrication</li>
+            <li>Gate & Fencing</li>
+            <li>Burglar Bars</li>
+            <li>Metal Repairs</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🏢</div>
+          <h3>Building Services</h3>
+          <p>Comprehensive building maintenance and repair services keeping your property in top condition.</p>
+          <ul class="service-features">
+            <li>General Repairs</li>
+            <li>Tiling & Flooring</li>
+            <li>Ceiling Installation</li>
+            <li>Property Maintenance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why-us" class="why-us">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">WHY CHOOSE US</div>
+        <h2 class="section-title">Excellence in Every Project</h2>
+        <p class="section-description">
+          Your trusted partner for professional services across Pretoria
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="feature-icon">⭐</div>
+          <h4>10+ Years Experience</h4>
+          <p>Decade of proven excellence serving Pretoria businesses and residents</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">🎯</div>
+          <h4>Licensed & Insured</h4>
+          <p>Fully certified professionals with comprehensive insurance coverage</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">💰</div>
+          <h4>Competitive Pricing</h4>
+          <p>Quality services at fair prices with transparent quotes</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">⚡</div>
+          <h4>Rapid Response</h4>
+          <p>24/7 availability for emergencies and urgent service requests</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Ready to Get Started?</h2>
+        <p>Contact us today for a free consultation and quote. Professional service is just one message away.</p>
+        <a href="https://wa.me/27728506949?text=Hello%20Lidios%20General%20Trading!%20I%20need%20assistance%20with:" class="whatsapp-btn" target="_blank">
+          <span class="whatsapp-icon">💬</span>
+          <span>WhatsApp Us Now</span>
+        </a>
+        <p style="margin-top: 2rem; font-size: 1.1rem; color: var(--light);">
+          📞 +27 72 850 6949<br>
+          📍 Serving Greater Pretoria & Gauteng
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="batau-banner">
+      <div class="batau-content">
+        <div class="batau-icon">🚀</div>
+        <h3>Website Crafted by Batau Software Dev</h3>
+        <p>This professional website showcases what's possible when you partner with <strong>Batau Software Dev</strong> - South Africa's premier web development specialists creating powerful digital solutions for ambitious businesses.</p>
+        
+        <div class="batau-features">
+          <div class="batau-feature">
+            <div class="batau-feature-icon">⚡</div>
+            <div class="batau-feature-text">
+              <strong>Lightning Fast</strong>
+              Performance-optimized for instant loading
+            </div>
+          </div>
+          <div class="batau-feature">
+            <div class="batau-feature-icon">📱</div>
+            <div class="batau-feature-text">
+              <strong>Mobile First</strong>
+              Beautiful on every device
+            </div>
+          </div>
+          <div class="batau-feature">
+            <div class="batau-feature-icon">🎯</div>
+            <div class="batau-feature-text">
+              <strong>SEO Optimized</strong>
+              Ranks high on Google searches
+            </div>
+          </div>
+          <div class="batau-feature">
+            <div class="batau-feature-icon">🔒</div>
+            <div class="batau-feature-text">
+              <strong>Secure & Reliable</strong>
+              Enterprise-grade hosting
+            </div>
+          </div>
+        </div>
+
+        <a href="https://wa.me/27689762588?text=Hi%20Batau!%20I%20saw%20the%20Lidios%20website%20and%20want%20one%20for%20my%20business!" class="batau-cta" target="_blank">
+          <span>💬</span>
+          <span>Get Your Premium Website Now</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-content">
+      <p><strong>Lidios General Trading</strong> - Professional Services in Pretoria</p>
+      <p>Security • Cleaning • Construction • Painting • Waterproofing • Plumbing • Welding • Building</p>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#why-us">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p style="margin-top: 2rem; opacity: 0.7;">© 2025 Lidios General Trading. All rights reserved. Made with ❤️ in South Africa 🇿🇦</p>
+    </div>
+  </footer>
+
+</body>
+</html>
